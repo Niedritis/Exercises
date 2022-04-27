@@ -104,7 +104,29 @@ public class Logic1
     /// </summary>
     public int CaughtSpeeding(int speed, bool isBirthday)
     {
-        throw new NotImplementedException();
+
+        
+
+        if (speed > 60 && speed <= 80)
+        {
+            return 1;
+        }
+        if (isBirthday && speed > 65 && speed <= 85) 
+        {
+            return 1;
+
+        }
+        if (speed > 80 || isBirthday && speed > 85 )
+        {
+            return 2;
+
+        }
+
+        
+        return 0;
+
+
+
     }
 
     /// <summary>
