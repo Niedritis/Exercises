@@ -48,8 +48,25 @@ public class Logic1
     /// </summary>
     public int DateFashion(int you, int date)
     {
-        throw new NotImplementedException();
+
+        if (you <= 2 || date <= 2)
+        {
+            return 0;
+        }
+
+        if (you >= 8 || date >= 8)
+        {
+            return 2;
+        }
+
+        {
+            return 1;
+
+        }
+
+
     }
+
 
     /// <summary>
     /// The squirrels in Palo Alto spend most of the day playing. In particular, they play if the
@@ -63,7 +80,15 @@ public class Logic1
     /// </summary>
     public bool SquirrelPlay(int temp, bool isSummer)
     {
-        throw new NotImplementedException();
+
+
+
+        if (temp >= 60 && ((isSummer && temp <= 100) || temp <= 90))
+
+        {
+            return true;
+        }
+        return false;
     }
 
     /// <summary>
