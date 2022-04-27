@@ -139,7 +139,16 @@ public class Logic1
     /// </summary>
     public int SortaSum(int a, int b)
     {
-        throw new NotImplementedException();
+
+        if ((a + b) >= 10 && (a + b) < 20 )
+        {
+            return 20;
+        }
+       
+        
+
+
+        return (a + b);
     }
 
     /// <summary>
