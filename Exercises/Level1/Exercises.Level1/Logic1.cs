@@ -165,8 +165,31 @@ public class Logic1
     /// </summary>
     public string AlarmClock(int day, bool vacation)
     {
-        throw new NotImplementedException();
+        string early = "7:00";
+        string late = "10:00";
+        string off = "off";
+
+        
+
+        if (day == 6 || day == 0) 
+        {
+            if (vacation) 
+            {
+                return off;
+
+            }
+            return late;
+        }
+        if (vacation) 
+        {
+            return late;
+        }
+
+
+            return early;
     }
+
+
 
     /// <summary>
     /// The number 6 is a truly great number. Given two int values, a and b, return true if either
@@ -179,7 +202,31 @@ public class Logic1
     /// </summary>
     public bool Love6(int a, int b)
     {
-        throw new NotImplementedException();
+       if (a == 6 || b == 6) 
+        { 
+            return true; 
+        }
+
+        if (a + b == 6 || (a - b) == 6)
+        {
+            return true;
+        }
+
+
+        int subtracted = a - b;
+      
+        int diff = Math.Abs(subtracted);
+
+        
+        if (diff == 6)
+        {
+            return true;
+        }
+
+
+        return false;
+
+
     }
 
     /// <summary>
