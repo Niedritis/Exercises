@@ -105,28 +105,29 @@ public class Logic1
     public int CaughtSpeeding(int speed, bool isBirthday)
     {
 
-        
+                
+           
+            if (isBirthday)
+            {
+                speed -= 5;
+            }
 
-        if (speed > 60 && speed <= 80)
-        {
+            
+            if (speed <= 60)
+            {
+                return 0;
+            }
+
+            
+            if (speed >= 81)
+            {
+                return 2;
+            }
+
+           
             return 1;
-        }
-        if (isBirthday && speed > 65 && speed <= 85) 
-        {
-            return 1;
-
-        }
-        if (speed > 80 || isBirthday && speed > 85 )
-        {
-            return 2;
-
-        }
-
         
-        return 0;
-
-
-
+        
     }
 
     /// <summary>
