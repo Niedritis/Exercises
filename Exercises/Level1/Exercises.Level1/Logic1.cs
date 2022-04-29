@@ -240,8 +240,41 @@ public class Logic1
     /// </summary>
     public bool In1To10(int n, bool outsideMode)
     {
-        throw new NotImplementedException();
+
+        if (outsideMode) 
+        {
+
+            if (n <= 1 || n >= 10)
+            {
+                return true;
+            }
+
+
+            return false;
+
+
+
+        }
+        
+                
+        
+        if (n >= 1 && n <= 10)
+        {
+            return true;
+        }
+
+
+        return false;
+
+
+
+
     }
+
+
+
+
+
 
     /// <summary>
     /// We'll say a number is special if it is a multiple of 11 or if it is one more than a multiple of
