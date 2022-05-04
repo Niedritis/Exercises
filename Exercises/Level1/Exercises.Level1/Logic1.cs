@@ -358,11 +358,10 @@ public class Logic1
     /// </summary>
     public bool Less20(int n)
     {
-       int a = 18;
-       int b = 19;
+      
 
 
-        if (n % 20 == a || n % 20 == b)
+        if (n % 20 == 18 || n % 20 == 19)
         {
 
             return true;
@@ -383,7 +382,16 @@ public class Logic1
     /// </summary>
     public bool NearTen(int num)
     {
-        throw new NotImplementedException();
+       
+
+        if (num % 10 == 8 || num % 10 == 9 || num % 10 == 1 || num % 10 == 2 || num % 10 == 0)
+        {
+
+            return true;
+
+        }
+
+        return false;
     }
 
     /// <summary>
