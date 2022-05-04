@@ -411,8 +411,6 @@ public class Logic1
         }
 
 
-
-
         return (a + b);
     }
 
@@ -427,7 +425,14 @@ public class Logic1
     /// </summary>
     public bool AnswerCell(bool isMorning, bool isMom, bool isAsleep)
     {
-        throw new NotImplementedException();
+
+        if (isAsleep || isMorning && !isMom)
+        {
+            return false;
+        }
+
+                return true;
+
     }
 
     /// <summary>
