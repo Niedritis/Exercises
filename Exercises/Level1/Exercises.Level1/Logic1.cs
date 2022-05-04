@@ -286,7 +286,7 @@ public class Logic1
     /// </summary>
     public bool SpecialEleven(int n)
     {
-        if ((n % 11) <= 1)
+        if (n % 11 <= 1)
         {
 
             return true;
@@ -307,7 +307,14 @@ public class Logic1
     /// </summary>
     public bool More20(int n)
     {
-        throw new NotImplementedException();
+        if (n % 20 <= 2 && n % 20 > 0)
+        {
+
+            return true;
+
+        }
+
+        return false;
     }
 
     /// <summary>
