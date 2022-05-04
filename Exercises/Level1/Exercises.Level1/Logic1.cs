@@ -358,7 +358,18 @@ public class Logic1
     /// </summary>
     public bool Less20(int n)
     {
-        throw new NotImplementedException();
+       int a = 18;
+       int b = 19;
+
+
+        if (n % 20 == a || n % 20 == b)
+        {
+
+            return true;
+
+        }
+
+        return false;
     }
 
     /// <summary>
