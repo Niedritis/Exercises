@@ -404,7 +404,16 @@ public class Logic1
     /// </summary>
     public int TeenSum(int a, int b)
     {
-        throw new NotImplementedException();
+        if ( a >= 13 && a<= 19 || b >= 13 && b <= 19)
+
+        {
+            return 19;
+        }
+
+
+
+
+        return (a + b);
     }
 
     /// <summary>
