@@ -327,7 +327,24 @@ public class Logic1
     /// </summary>
     public bool Old35(int n)
     {
-        throw new NotImplementedException();
+
+        
+
+        if (n % 3 == 0 && n % 5 == 0)
+        {
+
+            return false;
+
+        }
+
+        if (n % 3 == 0 || n % 5 == 0)
+        {
+
+            return true;
+
+        }
+
+        return false;
     }
 
     /// <summary>
