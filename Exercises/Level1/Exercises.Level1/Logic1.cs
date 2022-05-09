@@ -327,7 +327,7 @@ public class Logic1
     public bool Old35(int n)
     {
 
-        
+
 
         if (n % 3 == 0 && n % 5 == 0)
         {
@@ -447,12 +447,21 @@ public class Logic1
     /// </summary>
     public int TeaParty(int tea, int candy)
     {
-        throw new NotImplementedException();
+
+        if (tea < 5 || candy < 5)
+        {
+            return 0;
+        }
+        if ((tea /2) >= candy || (candy/2) >= tea)
+        {
+            return 2;
+        }
+        return 1;
     }
 
     /// <summary>
     /// Given a string str, if the string starts with "f" return "Fizz". If the string ends with "b"
-    /// return "Buzz". If both the "f" and "b" conditions are true, return "FizzBuzz". In all othe
+    /// return "Buzz". If both the "f" and "b" conditions are true, return c. In all othe
     /// cases, return the string unchanged.
     /// 
     /// fizzString("fig") → "Fizz"
@@ -461,8 +470,23 @@ public class Logic1
     /// </summary>
     public string FizzString(string str)
     {
-        throw new NotImplementedException();
+        if (str.StartsWith("f") && str.EndsWith("b")) 
+        {
+            return "FizzBuzz";
+        }
+        if (str.StartsWith("f"))
+        {
+            return "Fizz";
+        }
+
+        if (str.EndsWith("b"))
+        {
+            return "Buzz";
+        }
+        return str;
+
     }
+
 
     /// <summary>
     /// Given an int n, return the string form of the number followed by "!". So the int 6 yields
@@ -477,7 +501,23 @@ public class Logic1
     /// </summary>
     public string FizzString2(int n)
     {
-        throw new NotImplementedException();
+        if (n % 5 == 0 && n % 3 == 0)
+        {
+            return "FizzBuzz!";
+        }
+
+
+        if (n % 3 == 0)
+        {
+            return "Fizz!";
+        }
+        if (n % 5 == 0)
+        {
+            return "Buzz!";
+        }
+
+        
+        return n +"!";
     }
 
     /// <summary>
@@ -489,8 +529,21 @@ public class Logic1
     /// </summary>
     public bool TwoAsOne(int a, int b, int c)
     {
-        throw new NotImplementedException();
-    }
+        if (a + b == c) 
+        {
+            return true;
+        }
+        if (b + c == a)
+        {
+            return true;
+        }
+        if (a + c == b)
+        {
+            return true;
+        }
+
+        return false;
+    }  
 
     /// <summary>
     /// Given three ints, a b c, return true if b is greater than a, and c is greater than b. However,
