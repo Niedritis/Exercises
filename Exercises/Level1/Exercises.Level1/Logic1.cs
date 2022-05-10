@@ -578,7 +578,7 @@ public class Logic1
     /// </summary>
     public bool InOrderEqual(int a, int b, int c, bool bOk)
     {
-        if (c >= b && b >= a && bOk is true)
+        if (b >= a && c >= b && bOk is true)
         {
             return true;
         }
@@ -662,7 +662,28 @@ public class Logic1
     /// </summary>
     public int MaxMod5(int a, int b)
     {
-        throw new NotImplementedException();
+        if (a == b)
+        {
+            return 0;
+        }
+
+        if (a % 5 == b % 5 && a > b)
+        {
+            return b;
+        }
+
+
+        if (a % 5 == b % 5 && b > a)
+        {
+            return a;
+        }
+
+        if (b > a )
+        {
+            return b;
+        }
+
+        return a;
     }
 
     /// <summary>
@@ -677,7 +698,22 @@ public class Logic1
     /// </summary>
     public int RedTicket(int a, int b, int c)
     {
-        throw new NotImplementedException();
+        if (a != b && a != c)
+        {
+            return 1;
+        }
+        if (a + b + c == 6)
+        {
+            return 10;
+        }
+        if (a == b && b == c)
+        {
+            return 5;
+        }
+        
+            
+              
+        return 0;
     }
 
     /// <summary>
@@ -691,7 +727,19 @@ public class Logic1
     /// </summary>
     public int GreenTicket(int a, int b, int c)
     {
-        throw new NotImplementedException();
+        if (a == b && b == c)
+        {
+            return 20;
+        }
+
+        if (a == b || a == c || b == c)
+        {
+            return 10; 
+        }
+
+       
+
+        return 0;
     }
 
     /// <summary>
@@ -706,7 +754,20 @@ public class Logic1
     /// </summary>
     public int BlueTicket(int a, int b, int c)
     {
-        throw new NotImplementedException();
+
+        if (a + b == 10 || b + c == 10 || a + c == 10)
+        {
+            return 10;
+        }
+
+        if ((a + b) - 10 == b + c || (a + b) - 10 == a + c)
+        {
+            return 5;
+        }
+
+
+
+        return 0;
     }
 
     /// <summary>
@@ -720,7 +781,19 @@ public class Logic1
     /// </summary>
     public bool ShareDigit(int a, int b)
     {
-        throw new NotImplementedException();
+        if (a / 10 == b % 10 || b / 10 == a % 10)
+        {
+            return true;
+        }
+
+        if (a % 10 == b % 10)
+        {
+            return true;
+        }
+
+
+
+        return false;
     }
 
     /// <summary>
@@ -735,7 +808,16 @@ public class Logic1
     /// </summary>
     public int SumLimit(int a, int b)
     {
-        throw new NotImplementedException();
+        string num1 = Convert.ToString(a);
+        string num2 = Convert.ToString(b);
+
+        if (num1.Length = num2.Length)
+        {
+            return b;
+        }
+        return a;
+
+
     }
 }
 
