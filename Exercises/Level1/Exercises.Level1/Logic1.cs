@@ -555,7 +555,16 @@ public class Logic1
     /// </summary>
     public bool InOrder(int a, int b, int c, bool bOk)
     {
-        throw new NotImplementedException();
+        if (b > a && c > b && bOk is false)
+        {
+            return true;
+        }
+        if (bOk is true && c > b )
+        {
+            return true;
+        }
+
+        return false;
     }
 
     /// <summary>
@@ -569,7 +578,13 @@ public class Logic1
     /// </summary>
     public bool InOrderEqual(int a, int b, int c, bool bOk)
     {
-        throw new NotImplementedException();
+        if (c >= b && b >= a && bOk is true)
+        {
+            return true;
+        }
+        
+
+        return false;
     }
 
     /// <summary>
@@ -583,7 +598,13 @@ public class Logic1
     /// </summary>
     public bool LastDigit(int a, int b, int c)
     {
-        throw new NotImplementedException();
+        if (a % 10 == b % 10 || a % 10 == c % 10 || b % 10 == c % 10)
+        {
+            return true;
+        }
+
+
+        return false;
     }
 
     /// <summary>
@@ -596,7 +617,13 @@ public class Logic1
     /// </summary>
     public bool LessBy10(int a, int b, int c)
     {
-        throw new NotImplementedException();
+        if (a - 10 >= b || a - 10 >= c || b - 10 >= c || c - 10 >= a || c - 10 >= b)
+        {
+            return true;
+        }
+
+
+        return false;
     }
 
     /// <summary>
@@ -610,7 +637,17 @@ public class Logic1
     /// </summary>
     public int WithoutDoubles(int die1, int die2, bool noDoubles)
     {
-        throw new NotImplementedException();
+        if (die1 + die2 == 12 &&  noDoubles is true)
+        {
+            return 7;
+        }
+        if (die1 == die2 && noDoubles is true)
+        {
+            return die1 + 1 + die2;
+        }
+
+
+        return die1 + die2;
     }
 
     /// <summary>
