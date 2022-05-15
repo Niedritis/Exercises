@@ -207,7 +207,17 @@ public class Array1
     /// </summary>
     public int Sum2(int[] nums)
     {
-        throw new NotImplementedException();
+        
+        if (nums.Length == 1)
+        {
+            return nums[0];
+        }
+        if (nums.Length == 0)
+        {
+            return 0;
+        }
+
+        return nums[0] + nums[1];
     }
 
     /// <summary>
@@ -220,7 +230,15 @@ public class Array1
     /// </summary>
     public int[] MiddleWay(int[] a, int[] b)
     {
-        throw new NotImplementedException();
+
+
+        int first = a[1];
+
+        int second = b[1];
+
+        int[] result = { first,second};
+
+        return result;
     }
 
     /// <summary>
