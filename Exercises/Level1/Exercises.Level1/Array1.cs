@@ -231,12 +231,9 @@ public class Array1
     public int[] MiddleWay(int[] a, int[] b)
     {
 
+            
 
-        int first = a[1];
-
-        int second = b[1];
-
-        int[] result = { first,second};
+        int[] result = { a[1], b[1] };
 
         return result;
     }
@@ -251,7 +248,9 @@ public class Array1
     /// </summary>
     public int[] MakeEnds(int[] nums)
     {
-        throw new NotImplementedException();
+        int[] result = { nums[0], nums[nums.Length -1] };
+
+        return result;
     }
 
     /// <summary>
@@ -263,7 +262,16 @@ public class Array1
     /// </summary>
     public bool Has23(int[] nums)
     {
-        throw new NotImplementedException();
+
+        if (nums[0] == 2 || nums[0] == 3 || nums[1] == 2 || nums[1] == 3)
+        
+        { 
+            
+            return true; 
+        
+        }
+
+       return false;
     }
 
     /// <summary>
@@ -275,7 +283,15 @@ public class Array1
     /// </summary>
     public bool No23(int[] nums)
     {
-        throw new NotImplementedException();
+        if (nums[0] == 2 || nums[0] == 3 || nums[1] == 2 || nums[1] == 3)
+
+        {
+
+            return false;
+
+        }
+
+        return true;
     }
 
     /// <summary>
@@ -289,7 +305,13 @@ public class Array1
     /// </summary>
     public int[] MakeLast(int[] nums)
     {
-        throw new NotImplementedException();
+        int[] result = new int [nums.Length*2 ];
+
+
+        result[nums.Length * 2 - 1] = nums[nums.Length - 1];
+
+
+        return result;
     }
 
     /// <summary>
@@ -302,7 +324,23 @@ public class Array1
     /// </summary>
     public bool Double23(int[] nums)
     {
-        throw new NotImplementedException();
+        if (nums.Length < 2 )
+        {
+            return false;
+        }
+
+        
+        if (nums[0] == 2 && nums[1] == 2 || nums[0] == 3 && nums[1] == 3)
+
+        {
+
+            return true;
+
+        }
+        
+
+        
+        return false;
     }
 
     /// <summary>
@@ -315,7 +353,26 @@ public class Array1
     /// </summary>
     public int[] Fix23(int[] nums)
     {
-        throw new NotImplementedException();
+
+      
+
+        if (nums[0] == 2 && nums[1] == 3)
+        {
+           nums[1] = 0;
+        }
+        
+        
+
+        if (nums[1] == 2 && nums[2] == 3)
+        {
+            nums[2] = 0;
+        }
+        
+       
+
+        return nums;
+
+        
     }
 
     /// <summary>
