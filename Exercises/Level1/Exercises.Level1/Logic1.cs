@@ -1,5 +1,6 @@
 ﻿using System;
 
+
 namespace Exercises.Level1;
 
 /// <summary>
@@ -105,29 +106,29 @@ public class Logic1
     public int CaughtSpeeding(int speed, bool isBirthday)
     {
 
-                
-           
-            if (isBirthday)
-            {
-                speed -= 5;
-            }
 
-            
-            if (speed <= 60)
-            {
-                return 0;
-            }
 
-            
-            if (speed >= 81)
-            {
-                return 2;
-            }
+        if (isBirthday)
+        {
+            speed -= 5;
+        }
 
-           
-            return 1;
-        
-        
+
+        if (speed <= 60)
+        {
+            return 0;
+        }
+
+
+        if (speed >= 81)
+        {
+            return 2;
+        }
+
+
+        return 1;
+
+
     }
 
     /// <summary>
@@ -141,12 +142,12 @@ public class Logic1
     public int SortaSum(int a, int b)
     {
 
-        if ((a + b) >= 10 && (a + b) < 20 )
+        if ((a + b) >= 10 && (a + b) < 20)
         {
             return 20;
         }
-       
-        
+
+
 
 
         return (a + b);
@@ -169,24 +170,24 @@ public class Logic1
         string late = "10:00";
         string off = "off";
 
-        
 
-        if (day == 6 || day == 0) 
+
+        if (day == 6 || day == 0)
         {
-            if (vacation) 
+            if (vacation)
             {
                 return off;
 
             }
             return late;
         }
-        if (vacation) 
+        if (vacation)
         {
             return late;
         }
 
 
-            return early;
+        return early;
     }
 
 
@@ -202,9 +203,9 @@ public class Logic1
     /// </summary>
     public bool Love6(int a, int b)
     {
-       if (a == 6 || b == 6) 
-        { 
-            return true; 
+        if (a == 6 || b == 6)
+        {
+            return true;
         }
 
         if (a + b == 6 || (a - b) == 6)
@@ -214,10 +215,10 @@ public class Logic1
 
 
         int subtracted = a - b;
-      
+
         int diff = Math.Abs(subtracted);
 
-        
+
         if (diff == 6)
         {
             return true;
@@ -241,7 +242,7 @@ public class Logic1
     public bool In1To10(int n, bool outsideMode)
     {
 
-        if (outsideMode) 
+        if (outsideMode)
         {
 
             if (n <= 1 || n >= 10)
@@ -255,9 +256,9 @@ public class Logic1
 
 
         }
-        
-                
-        
+
+
+
         if (n >= 1 && n <= 10)
         {
             return true;
@@ -357,7 +358,7 @@ public class Logic1
     /// </summary>
     public bool Less20(int n)
     {
-      
+
 
 
         if (n % 20 == 18 || n % 20 == 19)
@@ -381,7 +382,7 @@ public class Logic1
     /// </summary>
     public bool NearTen(int num)
     {
-       
+
 
         if (num % 10 == 8 || num % 10 == 9 || num % 10 == 1 || num % 10 == 2 || num % 10 == 0)
         {
@@ -403,7 +404,7 @@ public class Logic1
     /// </summary>
     public int TeenSum(int a, int b)
     {
-        if ( a >= 13 && a<= 19 || b >= 13 && b <= 19)
+        if (a >= 13 && a <= 19 || b >= 13 && b <= 19)
 
         {
             return 19;
@@ -430,7 +431,7 @@ public class Logic1
             return false;
         }
 
-                return true;
+        return true;
 
     }
 
@@ -452,7 +453,7 @@ public class Logic1
         {
             return 0;
         }
-        if ((tea /2) >= candy || (candy/2) >= tea)
+        if ((tea / 2) >= candy || (candy / 2) >= tea)
         {
             return 2;
         }
@@ -470,7 +471,7 @@ public class Logic1
     /// </summary>
     public string FizzString(string str)
     {
-        if (str.StartsWith("f") && str.EndsWith("b")) 
+        if (str.StartsWith("f") && str.EndsWith("b"))
         {
             return "FizzBuzz";
         }
@@ -486,6 +487,7 @@ public class Logic1
         return str;
 
     }
+
 
 
     /// <summary>
@@ -516,8 +518,8 @@ public class Logic1
             return "Buzz!";
         }
 
-        
-        return n +"!";
+
+        return n + "!";
     }
 
     /// <summary>
@@ -529,7 +531,7 @@ public class Logic1
     /// </summary>
     public bool TwoAsOne(int a, int b, int c)
     {
-        if (a + b == c) 
+        if (a + b == c)
         {
             return true;
         }
@@ -543,7 +545,7 @@ public class Logic1
         }
 
         return false;
-    }  
+    }
 
     /// <summary>
     /// Given three ints, a b c, return true if b is greater than a, and c is greater than b. However,
@@ -559,7 +561,7 @@ public class Logic1
         {
             return true;
         }
-        if (bOk is true && c > b )
+        if (bOk is true && c > b)
         {
             return true;
         }
@@ -578,11 +580,18 @@ public class Logic1
     /// </summary>
     public bool InOrderEqual(int a, int b, int c, bool bOk)
     {
+        if (bOk is false)
+        {
+            return false;
+        }
+
+
+
         if (b >= a && c >= b && bOk is true)
         {
             return true;
         }
-        
+
 
         return false;
     }
@@ -637,7 +646,7 @@ public class Logic1
     /// </summary>
     public int WithoutDoubles(int die1, int die2, bool noDoubles)
     {
-        if (die1 + die2 == 12 &&  noDoubles is true)
+        if (die1 + die2 == 12 && noDoubles is true)
         {
             return 7;
         }
@@ -678,13 +687,14 @@ public class Logic1
             return a;
         }
 
-        if (b > a )
+        if (b > a)
         {
             return b;
         }
 
         return a;
     }
+
 
     /// <summary>
     /// You have a red lottery ticket showing ints a, b, and c, each of which is 0, 1, or 2. If they
@@ -710,9 +720,9 @@ public class Logic1
         {
             return 5;
         }
-        
-            
-              
+
+
+
         return 0;
     }
 
@@ -734,10 +744,10 @@ public class Logic1
 
         if (a == b || a == c || b == c)
         {
-            return 10; 
+            return 10;
         }
 
-       
+
 
         return 0;
     }
@@ -808,16 +818,8 @@ public class Logic1
     /// </summary>
     public int SumLimit(int a, int b)
     {
-        string num1 = Convert.ToString(a);
-        string num2 = Convert.ToString(b);
-
-        if (num1.Length = num2.Length)
-        {
-            return b;
-        }
-        return a;
-
-
+        throw new NotImplementedException();
     }
 }
+
 
