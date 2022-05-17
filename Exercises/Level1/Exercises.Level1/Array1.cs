@@ -388,6 +388,9 @@ public class Array1
         throw new NotImplementedException();
     }
 
+
+
+
     /// <summary>
     /// Start with 2 int arrays, a and b, each length 2. Consider the sum of the values in each
     /// array. Return the array which has the largest sum. In event of a tie, return a.
@@ -398,9 +401,21 @@ public class Array1
     /// </summary>
     public int[] BiggerTwo(int[] a, int[] b)
     {
-        throw new NotImplementedException();
+        int sum1 = a[0] + a[1];
+        int sum2 = b[0] + b[1];
+       
+        if (sum1 >= sum2) 
+        
+        {
+            return a;
+        }
+
+
+        return b;
     }
 
+
+   
     /// <summary>
     /// Given an array of ints of even length, return a new array length 2 containing the middle
     /// two elements from the original array. The original array will be length 2 or more.
@@ -424,7 +439,9 @@ public class Array1
     /// </summary>
     public int[] PlusTwo(int[] a, int[] b)
     {
-        throw new NotImplementedException();
+        int[] result = { a[0], a[1], b[0], b[1] };
+
+        return result;
     }
 
     /// <summary>
@@ -437,7 +454,14 @@ public class Array1
     /// </summary>
     public int[] SwapEnds(int[] nums)
     {
-        throw new NotImplementedException();
+        int a = nums[0];
+        int b = nums[nums.Length - 1];
+        nums[0] = b;
+
+        nums[nums.Length - 1] = a;
+        return nums;
+
+
     }
 
     /// <summary>
