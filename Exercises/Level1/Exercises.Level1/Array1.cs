@@ -532,11 +532,21 @@ public class Array1
     /// </summary>
     public int MaxTriple(int[] nums)
     {
+        int a = nums[0];
+        int b = nums[(nums.Length - 1) / 2];
+        int c = nums[nums.Length - 1];
 
+        if (a > b && a > c) 
         {
-            throw new NotImplementedException();
-        }
 
+            return a;
+        }
+        if (b > c && b > a)
+        {
+
+            return b;
+        }
+        return c;
 
 
     }

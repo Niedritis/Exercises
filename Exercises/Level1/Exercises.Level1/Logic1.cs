@@ -557,14 +557,32 @@ public class Logic1
     /// </summary>
     public bool InOrder(int a, int b, int c, bool bOk)
     {
-        if (b > a && c > b && bOk is false)
+        if (bOk) 
         {
-            return true;
+            if (c > b)
+
+            {
+                return true;
+
+            }
+
         }
-        if (bOk is true && c > b)
-        {
-            return true;
+       
+
+        { 
+
+            if (c > b && b > a) 
+            
+            {
+                return true;
+
+
+            }
+            
+
+
         }
+
 
         return false;
     }
