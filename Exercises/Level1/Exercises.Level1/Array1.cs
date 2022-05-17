@@ -497,7 +497,13 @@ public class Array1
     /// </summary>
     public int MaxTriple(int[] nums)
     {
-        throw new NotImplementedException();
+
+        {
+            throw new NotImplementedException();
+        }
+
+
+
     }
 
     /// <summary>
@@ -510,7 +516,22 @@ public class Array1
     /// </summary>
     public int[] FrontPiece(int[] nums)
     {
-        throw new NotImplementedException();
+
+        if (nums.Length < 2)
+        {
+            return nums;
+        }
+
+
+        int[] array = new int[2];
+
+
+
+        array[0] = nums[0];
+        array[1] = nums[1];
+        
+
+        return array;
     }
 
     /// <summary>
