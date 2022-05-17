@@ -808,8 +808,6 @@ public class Logic1
             return true;
         }
 
-
-
         return false;
     }
 
