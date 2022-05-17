@@ -474,7 +474,17 @@ public class Array1
     /// </summary>
     public int[] MidThree(int[] nums)
     {
-        throw new NotImplementedException();
+       
+        int[] array = new int[3];
+
+
+        int b = (nums.Length - 1)/2;
+        
+        array[0] = nums[b-1];
+        array[1] = nums[b];
+        array[2] = nums[b+1];
+
+        return array;
     }
 
     /// <summary>
