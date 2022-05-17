@@ -385,7 +385,33 @@ public class Array1
     /// </summary>
     public int Start1(int[] a, int[] b)
     {
-        throw new NotImplementedException();
+        if (a.Length == 0 && b.Length == 0)
+        {
+            return 0;
+        }
+
+        if (a.Length == 0 && b[0] != 1 || b.Length == 0 && a[0] != 1)
+        {
+            return 0;
+        }
+        
+        if (a.Length == 0 && b[0] == 1 || b.Length == 0 && a[0] == 1)
+        {
+            return 1;
+        }
+        if (a[0] == 1 && b[0] != 1 || b[0] == 1 && a[0] != 1)
+        {
+            return 1;
+        }
+        if (a[0] == 1 && b[0] == 1 )
+        {
+            return 2;
+        }
+
+        
+        return 0;
+
+
     }
 
 
@@ -426,7 +452,16 @@ public class Array1
     /// </summary>
     public int[] MakeMiddle(int[] nums)
     {
-        throw new NotImplementedException();
+
+        //int[] array = new int[2];
+
+
+        int a = nums[(nums.Length - 1) / 2];
+        int b = nums[(nums.Length - 1) / 2 + 1];
+
+
+        int[] array = { a, b };
+        return array;
     }
 
     /// <summary>
@@ -544,8 +579,22 @@ public class Array1
     /// </summary>
     public bool Unlucky1(int[] nums)
     {
-        throw new NotImplementedException();
+       
+        
+        if (nums.Length<2)
+            return false;
+
+        if ((nums[0] == 1 && nums[1] == 3) || (nums[1] == 1 && nums[2] == 3) ||(nums[nums.Length - 2] == 1 && nums[nums.Length - 1] == 3))
+            return true;
+
+        return false;
     }
+
+       
+
+
+
+    
 
     /// <summary>
     /// Given 2 int arrays, a and b, return a new array length 2 containing, as much as will fit, the
