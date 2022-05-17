@@ -571,6 +571,42 @@ public class Array1
     /// </summary>
     public int[] Front11(int[] a, int[] b)
     {
-        throw new NotImplementedException();
+        if (a.Length == 0 && b.Length == 0) 
+        
+        
+        {
+            return new int[] {};
+
+        }
+
+        if (a.Length != 0 && b.Length == 0)
+
+           
+
+        {
+            return new int[] { a[0] };
+
+        }
+
+        if (b.Length != 0 && a.Length == 0)
+
+
+
+        {
+            return new int[] { b[0] };
+
+        }
+
+        return new int[] { a[0], b[0] };  
+
+
+
+
+
+
+
+
+
+
     }
 }
