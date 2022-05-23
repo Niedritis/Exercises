@@ -17,7 +17,24 @@ public class Array2
     /// </summary>
     public int CountEvens(int[] nums)
     {
-        throw new NotImplementedException();
+        {
+            
+            int count = 0;
+
+            
+            foreach (int num in nums)
+            {
+                
+                if (num % 2 == 0)
+                {
+                    count++;
+                }
+            }
+
+            
+            return count;
+        }
+
     }
 
     /// <summary>
@@ -31,7 +48,20 @@ public class Array2
     /// </summary>
     public int BigDiff(int[] nums)
     {
-        throw new NotImplementedException();
+        
+        {
+            int largest = nums[0];
+            int smallest = nums[0];
+
+            foreach (int num in nums)
+            {
+                largest = Math.Max(largest, num);
+                smallest = Math.Min(smallest, num);
+            }
+
+            return largest - smallest;
+        }
+
     }
 
     /// <summary>
@@ -47,7 +77,21 @@ public class Array2
     /// </summary>
     public int CenteredAverage(int[] nums)
     {
-        throw new NotImplementedException();
+        {
+            int sum = 0;
+
+            Array.Sort(nums);
+
+            for (int i = 1; i < nums.Length - 1; i++)
+            {
+                sum += nums[i];
+            }
+
+            int avarage = sum / (nums.Length - 2);
+
+            return avarage;
+        }
+
     }
 
     /// <summary>
@@ -61,7 +105,33 @@ public class Array2
     /// </summary>
     public int Sum13(int[] nums)
     {
-        throw new NotImplementedException();
+        if (nums.Length == 0)
+        {
+            return 0;
+        }
+
+        int sum = 0;
+
+        for (int i = 0; i < nums.Length; i++)
+        {
+            if (nums[i] != 13)
+            {
+                sum += nums[i];
+                continue;
+            }
+
+            nums[i] = 0;
+
+            if (i + 1 < nums.Length)
+            {
+                nums[i + 1] = 0;
+            }
+        }
+
+        return sum;
+
+
+
     }
 
     /// <summary>
@@ -75,7 +145,34 @@ public class Array2
     /// </summary>
     public int Sum67(int[] nums)
     {
-        throw new NotImplementedException();
+        {
+            int sum = 0;
+            bool isIgnoring = false;
+
+            foreach (int num in nums)
+            {
+                if (num == 6)
+                {
+                    isIgnoring = true;
+                    continue;
+                }
+
+                if (num == 7 && isIgnoring)
+                {
+                    isIgnoring = false;
+                    continue;
+                }
+
+                if (!isIgnoring)
+                {
+                    sum += num;
+                }
+            }
+
+            return sum;
+        }
+
+
     }
 
     /// <summary>
@@ -87,7 +184,29 @@ public class Array2
     /// </summary>
     public bool Has22(int[] nums)
     {
-        throw new NotImplementedException();
+       {
+
+            for (int i = 0; i < nums.Length; i++)
+
+            
+                if (nums[i] == 2 && i > 0 && nums[i-1] == 2) 
+                {
+                    return true;
+                }
+
+                         
+            
+        }
+
+        return false;
+
+
+
+
+
+
+
+
     }
 
     /// <summary>
