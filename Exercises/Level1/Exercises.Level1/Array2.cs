@@ -346,17 +346,40 @@ public class Array2
     /// </summary>
     public bool No14(int[] nums)
     {
-        for (int i = 0; i < nums.Length; i++) 
-        { 
+
+        bool result1 = false;
+        bool result4 = false;
+
+        for (int i = 0; i < nums.Length; i++)
+        {
 
 
-            if (nums[i] == 1 && nums[i] == 4)
+            if (nums[i] == 1)
             {
-                return false;
+                result1 = true;
             }
-             
+            if (nums[i] == 4)
+            {
+                result4 = true;
+            }
+
+            if (result1 && result4)
+            {
+                return  false;
+            }
+
+
         }
+
         return true;
+
+
+
+
+
+
+
+
     }
 
     /// <summary>
@@ -423,10 +446,30 @@ public class Array2
     /// </summary>
     public bool Has12(int[] nums)
     {
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
+
+        bool result1 = false;
+        bool result2 = false;
+
+        for (int i = 0; i < nums.Length; i++)
+        { 
+
+
+            if (nums[i] == 1)
+            {
+                result1 = true;
+            }
+            if (nums[i] == 2 && result1)
+            {
+                result2 = true;
+            }
+        }
+
+        return result2;
+
     }
 
-    /// <summary>
+        /// <summary>
     /// Given an array of ints, return true if the array contains either 3 even or 3 odd values all
     /// next to each other.
     /// 
